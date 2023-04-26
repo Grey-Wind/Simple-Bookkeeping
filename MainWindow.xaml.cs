@@ -22,15 +22,15 @@ namespace SimpleBookkeeping
             dataGrid.ItemsSource = bookkeepingEntries;
         }
 
-        private void OnAddClicked(object sender, RoutedEventArgs e)
-        {
-            EditWindow editWindow = new EditWindow();
-            if (editWindow.ShowDialog() == true)
-            {
-                bookkeepingEntries.Add(editWindow.Entry);
-                SaveDataToJson();
-            }
-        }
+        //private void OnAddClicked(object sender, RoutedEventArgs e)
+        //{
+        //   EditWindow editWindow = new EditWindow();
+        //    if (editWindow.ShowDialog() == true)
+        //    {
+        //        bookkeepingEntries.Add(editWindow.Entry);
+        //        SaveDataToJson();
+        //    }
+        //}
 
         private void OnDeleteClicked(object sender, RoutedEventArgs e)
         {
@@ -93,6 +93,25 @@ namespace SimpleBookkeeping
                 }
             }
         }
+
+        private void OnAddClicked(object sender, RoutedEventArgs e)
+        {
+            var dialog = new EditWindow();
+            dialog.Owner = this;
+            var result = dialog.ShowDialog();
+            if (result.HasValue && result.Value)
+            {
+                // 将添加的条目添加到列表中
+                var entry = dialog.Entry;
+                bookkeepingEntries.Add(entry);
+                SaveDataToJson();
+
+                // 通知系统更新数据绑定
+                dataGrid.ItemsSource = null;
+                dataGrid.ItemsSource = bookkeepingEntries;
+            }
+        }
+
     }
 
     public class BookkeepingEntry

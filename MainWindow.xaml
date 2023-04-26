@@ -17,8 +17,9 @@
         <StackPanel Grid.Column="1" Margin="10">
             <Button Content="Import" Click="OnImportClicked" Margin="0 10 0 10" />
             <Button Content="Export" Click="OnExportClicked" Margin="0 10 0 10" />
-            <Button Content="Add" Click="OnAddClicked" Margin="0 10 0 10" />
+            <!-- <Button Content="Add" Click="OnAddClicked" Margin="0 10 0 10" /> -->
             <Button Content="Delete" Click="OnDeleteClicked" Margin="0 10 0 10" />
+            <Button x:Name="Add" Content="Add" Margin="0,0,0.4,0" Click="OnAddClicked"/>
         </StackPanel>
     </Grid>
 </Window>
