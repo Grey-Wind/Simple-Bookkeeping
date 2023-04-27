@@ -25,7 +25,8 @@ namespace SimpleBookkeeping
         {
             InitializeComponent();
             Entry = new BookkeepingEntry();
-            Entry.Date = DateTime.Today;
+            //Entry.Date = DateTime.Today;//这个只能获取年月日，没有时分秒
+            Entry.Date = DateTime.Now;//年月日和时分秒都有
             DataContext = Entry;
         }
 
