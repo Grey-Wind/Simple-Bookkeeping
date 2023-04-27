@@ -9,17 +9,17 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="dataGrid" Grid.Column="0" Margin="10" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}" />
-                <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}" />
-                <DataGridTextColumn Header="Amount" Binding="{Binding Path=Amount}" />
+                <DataGridTextColumn Header="日期" Binding="{Binding Path=Date}" />
+                <DataGridTextColumn Header="详情" Binding="{Binding Path=Description}" />
+                <DataGridTextColumn Header="金额" Binding="{Binding Path=Amount}" />
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Column="1" Margin="10">
-            <Button Content="Import" Click="OnImportClicked" Margin="0 10 0 10" />
-            <Button Content="Export" Click="OnExportClicked" Margin="0 10 0 10" />
+            <Button x:Name="Import" Content="导入" Click="OnImportClicked" Margin="0 10 0 10" FontSize="14" />
+            <Button x:Name="Export" Content="导出" Click="OnExportClicked" Margin="0 10 0 10" FontSize="14" />
             <!-- <Button Content="Add" Click="OnAddClicked" Margin="0 10 0 10" /> -->
-            <Button Content="Delete" Click="OnDeleteClicked" Margin="0 10 0 10" />
-            <Button x:Name="Add" Content="Add" Margin="0,0,0.4,0" Click="OnAddClicked"/>
+            <Button x:Name="Delete" Content="删除" Click="OnDeleteClicked" Margin="0 10 0 10" FontSize="14" />
+            <Button x:Name="Add" Content="添加" Margin="0,0,0.4,0" Click="OnAddClicked" FontSize="14"/>
         </StackPanel>
     </Grid>
 </Window>
