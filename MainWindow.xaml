@@ -7,7 +7,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGrid" Grid.Column="0" Margin="10" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged">
+        <DataGrid x:Name="dataGrid" Grid.Column="0" Margin="10" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="日期" Binding="{Binding Path=Date}" />
                 <DataGridTextColumn Header="详情" Binding="{Binding Path=Description}" />
