@@ -8,11 +8,11 @@ using System.Windows;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("SimpleBookkeeping")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("简易记账")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Sunrise Studio")]
 [assembly: AssemblyProduct("SimpleBookkeeping")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCopyright("GNU AFFERO GENERAL PUBLIC LICENSE Version 3 Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -53,3 +53,4 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguage("zh-CN")]
